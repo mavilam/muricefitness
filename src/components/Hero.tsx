@@ -106,7 +106,7 @@ export default function Hero() {
             {/* Image container */}
             <div className="relative w-72 h-[420px] sm:w-80 sm:h-[480px] rounded-3xl overflow-hidden border border-white/8 shadow-2xl shadow-black/60">
               <img
-                src="/profile-coach.jpg"
+                src={`${import.meta.env.BASE_URL}profile-coach.jpg`}
                 alt="Personal Trainer"
                 className="w-full h-full object-cover object-top"
                 onError={(e) => {

@@ -47,7 +47,7 @@ export default function About() {
                   <div className="flex items-center gap-3 mt-5">
                     <div className="w-10 h-10 rounded-full bg-zinc-800 flex items-center justify-center overflow-hidden border border-white/10">
                       <img
-                        src="/profile-coach.jpg"
+                        src={`${import.meta.env.BASE_URL}profile-coach.jpg`}
                         alt="Coach"
                         className="w-full h-full object-cover"
                         onError={(e) => {
