@@ -95,12 +95,12 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.92, x: 40 }}
             animate={{ opacity: 1, scale: 1, x: 0 }}
             transition={{ duration: 0.9, ease: 'easeOut', delay: 0.25 }}
-            className="relative flex justify-center lg:justify-end"
+            className="relative flex flex-col items-center lg:items-end gap-4"
           >
-            {/* Decorative ring */}
-            <div className="absolute inset-0 flex items-center justify-center">
-              <div className="w-[360px] h-[360px] sm:w-[440px] sm:h-[440px] rounded-full border border-lime-400/15 animate-pulse" />
-              <div className="absolute w-[310px] h-[310px] sm:w-[380px] sm:h-[380px] rounded-full border border-lime-400/8" />
+            {/* Decorative ring — hidden on mobile to avoid overflow */}
+            <div className="absolute inset-0 hidden sm:flex items-center justify-center pointer-events-none">
+              <div className="w-[440px] h-[440px] rounded-full border border-lime-400/15 animate-pulse" />
+              <div className="absolute w-[380px] h-[380px] rounded-full border border-lime-400/8" />
             </div>
 
             {/* Image container */}
@@ -137,16 +137,6 @@ export default function Hero() {
               </div>
             </div>
 
-            {/* Floating badge */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: 0.9, duration: 0.5 }}
-              className="absolute -bottom-4 sm:bottom-4 -left-4 sm:-left-10 bg-zinc-900 border border-white/10 rounded-2xl px-4 py-3 shadow-xl"
-            >
-              <p className="text-xs text-zinc-500 uppercase tracking-wider">Competition Prep</p>
-              <p className="text-white font-bold text-sm mt-0.5">Hyrox &amp; CrossFit</p>
-            </motion.div>
           </motion.div>
         </div>
       </div>
